@@ -8,22 +8,25 @@
 
 import Foundation
 
-enum COVID19Error: Error {
+public enum COVID19Error: Error {
     
     case formatting
     case badRequest
+    case unknown
     
 }
 
 extension COVID19Error: CustomStringConvertible {
     
-    var description: String {
+    public var description: String {
         
         switch self {
         case .formatting:
             return "Something went wrong during formatting"
         case .badRequest:
             return "HTTP response was not 200"
+        case .unknown:
+            return "Something happened that we don't know"
         }
         
     }

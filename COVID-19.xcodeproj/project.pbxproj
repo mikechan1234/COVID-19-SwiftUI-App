@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		D08E85582428648A00871F2E /* SCMPVirusCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E85572428648A00871F2E /* SCMPVirusCases.swift */; };
+		D08E859B24288D7D00871F2E /* COVID_19_API_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D08E859924288D7D00871F2E /* COVID_19_API_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D08E859E24288D7D00871F2E /* COVID_19_API_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08E859724288D7D00871F2E /* COVID_19_API_watchOS.framework */; };
+		D08E859F24288D7D00871F2E /* COVID_19_API_watchOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D08E859724288D7D00871F2E /* COVID_19_API_watchOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D08E85A324288D8700871F2E /* SCMPAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943D224283EC500C3B4C4 /* SCMPAPI.swift */; };
+		D08E85A424288D8700871F2E /* SCMPVirusCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E85572428648A00871F2E /* SCMPVirusCases.swift */; };
+		D08E85A524288D8700871F2E /* SCMPCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943D424283F1200C3B4C4 /* SCMPCountry.swift */; };
+		D08E85A624288D8700871F2E /* COVID19Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943DB24285A6E00C3B4C4 /* COVID19Errors.swift */; };
+		D08E85A724288D8A00871F2E /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943D8242858F400C3B4C4 /* Foundation+Extension.swift */; };
+		D08E85A9242894F600871F2E /* WatchCOVID19ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E85A8242894F600871F2E /* WatchCOVID19ListView.swift */; };
+		D08E85AB2428957400871F2E /* COVID19SummaryCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E85AA2428957400871F2E /* COVID19SummaryCountView.swift */; };
+		D08E85AD2428990500871F2E /* COVID19SummaryCountViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E85AC2428990500871F2E /* COVID19SummaryCountViewType.swift */; };
+		D08E85B02429927900871F2E /* WatchCOVID19ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E85AF2429927900871F2E /* WatchCOVID19ListViewModel.swift */; };
 		D0A9435124283DA500C3B4C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9435024283DA500C3B4C4 /* AppDelegate.swift */; };
 		D0A9435324283DA500C3B4C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9435224283DA500C3B4C4 /* SceneDelegate.swift */; };
 		D0A9435524283DA500C3B4C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9435424283DA500C3B4C4 /* ContentView.swift */; };
@@ -20,7 +32,6 @@
 		D0A9437E24283DA800C3B4C4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A9437C24283DA800C3B4C4 /* Interface.storyboard */; };
 		D0A9438024283DA900C3B4C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A9437F24283DA900C3B4C4 /* Assets.xcassets */; };
 		D0A9438724283DA900C3B4C4 /* COVID-19 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D0A9438624283DA900C3B4C4 /* COVID-19 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D0A9438C24283DA900C3B4C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9438B24283DA900C3B4C4 /* ContentView.swift */; };
 		D0A9438E24283DA900C3B4C4 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9438D24283DA900C3B4C4 /* HostingController.swift */; };
 		D0A9439024283DA900C3B4C4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9438F24283DA900C3B4C4 /* ExtensionDelegate.swift */; };
 		D0A9439224283DA900C3B4C4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9439124283DA900C3B4C4 /* NotificationController.swift */; };
@@ -33,13 +44,20 @@
 		D0A943C924283EB100C3B4C4 /* COVID_19_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A943B424283EB100C3B4C4 /* COVID_19_API.framework */; };
 		D0A943CA24283EB100C3B4C4 /* COVID_19_API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0A943B424283EB100C3B4C4 /* COVID_19_API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0A943D324283EC500C3B4C4 /* SCMPAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943D224283EC500C3B4C4 /* SCMPAPI.swift */; };
-		D0A943D524283F1200C3B4C4 /* SCMPCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943D424283F1200C3B4C4 /* SCMPCountries.swift */; };
+		D0A943D524283F1200C3B4C4 /* SCMPCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943D424283F1200C3B4C4 /* SCMPCountry.swift */; };
 		D0A943D72428419100C3B4C4 /* CountriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943D62428419100C3B4C4 /* CountriesTest.swift */; };
 		D0A943D9242858F400C3B4C4 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943D8242858F400C3B4C4 /* Foundation+Extension.swift */; };
 		D0A943DC24285A6E00C3B4C4 /* COVID19Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A943DB24285A6E00C3B4C4 /* COVID19Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D08E859C24288D7D00871F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0A9434524283DA500C3B4C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D08E859624288D7D00871F2E;
+			remoteInfo = "COVID-19-API watchOS";
+		};
 		D0A9436424283DA800C3B4C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0A9434524283DA500C3B4C4 /* Project object */;
@@ -92,6 +110,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D08E857A2428877900871F2E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D08E859F24288D7D00871F2E /* COVID_19_API_watchOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A943A124283DAA00C3B4C4 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +158,13 @@
 
 /* Begin PBXFileReference section */
 		D08E85572428648A00871F2E /* SCMPVirusCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCMPVirusCases.swift; sourceTree = "<group>"; };
+		D08E859724288D7D00871F2E /* COVID_19_API_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = COVID_19_API_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08E859924288D7D00871F2E /* COVID_19_API_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COVID_19_API_watchOS.h; sourceTree = "<group>"; };
+		D08E859A24288D7D00871F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D08E85A8242894F600871F2E /* WatchCOVID19ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCOVID19ListView.swift; sourceTree = "<group>"; };
+		D08E85AA2428957400871F2E /* COVID19SummaryCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19SummaryCountView.swift; sourceTree = "<group>"; };
+		D08E85AC2428990500871F2E /* COVID19SummaryCountViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19SummaryCountViewType.swift; sourceTree = "<group>"; };
+		D08E85AF2429927900871F2E /* WatchCOVID19ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCOVID19ListViewModel.swift; sourceTree = "<group>"; };
 		D0A9434D24283DA500C3B4C4 /* COVID-19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A9435024283DA500C3B4C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A9435224283DA500C3B4C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +184,6 @@
 		D0A9437F24283DA900C3B4C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A9438124283DA900C3B4C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A9438624283DA900C3B4C4 /* COVID-19 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "COVID-19 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A9438B24283DA900C3B4C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D0A9438D24283DA900C3B4C4 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		D0A9438F24283DA900C3B4C4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D0A9439124283DA900C3B4C4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -164,13 +199,20 @@
 		D0A943C324283EB100C3B4C4 /* COVID_19_APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID_19_APITests.swift; sourceTree = "<group>"; };
 		D0A943C524283EB100C3B4C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A943D224283EC500C3B4C4 /* SCMPAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCMPAPI.swift; sourceTree = "<group>"; };
-		D0A943D424283F1200C3B4C4 /* SCMPCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCMPCountries.swift; sourceTree = "<group>"; };
+		D0A943D424283F1200C3B4C4 /* SCMPCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCMPCountry.swift; sourceTree = "<group>"; };
 		D0A943D62428419100C3B4C4 /* CountriesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTest.swift; sourceTree = "<group>"; };
 		D0A943D8242858F400C3B4C4 /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
 		D0A943DB24285A6E00C3B4C4 /* COVID19Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D08E859424288D7D00871F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A9434A24283DA500C3B4C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08E859E24288D7D00871F2E /* COVID_19_API_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +261,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D08E859824288D7D00871F2E /* COVID-19-API watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				D08E859924288D7D00871F2E /* COVID_19_API_watchOS.h */,
+				D08E859A24288D7D00871F2E /* Info.plist */,
+			);
+			path = "COVID-19-API watchOS";
+			sourceTree = "<group>";
+		};
+		D08E85AE24289A6800871F2E /* COVID19SummaryCountView */ = {
+			isa = PBXGroup;
+			children = (
+				D08E85AA2428957400871F2E /* COVID19SummaryCountView.swift */,
+				D08E85AC2428990500871F2E /* COVID19SummaryCountViewType.swift */,
+			);
+			path = COVID19SummaryCountView;
+			sourceTree = "<group>";
+		};
 		D0A9434424283DA500C3B4C4 = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +289,7 @@
 				D0A9438A24283DA900C3B4C4 /* COVID-19 WatchKit Extension */,
 				D0A943B524283EB100C3B4C4 /* COVID-19-API */,
 				D0A943C224283EB100C3B4C4 /* COVID-19-APITests */,
+				D08E859824288D7D00871F2E /* COVID-19-API watchOS */,
 				D0A9434E24283DA500C3B4C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -242,6 +304,7 @@
 				D0A9438624283DA900C3B4C4 /* COVID-19 WatchKit Extension.appex */,
 				D0A943B424283EB100C3B4C4 /* COVID_19_API.framework */,
 				D0A943BC24283EB100C3B4C4 /* COVID-19-APITests.xctest */,
+				D08E859724288D7D00871F2E /* COVID_19_API_watchOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,7 +362,9 @@
 		D0A9438A24283DA900C3B4C4 /* COVID-19 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D0A9438B24283DA900C3B4C4 /* ContentView.swift */,
+				D08E85A8242894F600871F2E /* WatchCOVID19ListView.swift */,
+				D08E85AF2429927900871F2E /* WatchCOVID19ListViewModel.swift */,
+				D08E85AE24289A6800871F2E /* COVID19SummaryCountView */,
 				D0A9438D24283DA900C3B4C4 /* HostingController.swift */,
 				D0A9438F24283DA900C3B4C4 /* ExtensionDelegate.swift */,
 				D0A9439124283DA900C3B4C4 /* NotificationController.swift */,
@@ -327,7 +392,7 @@
 				D0A943B724283EB100C3B4C4 /* Info.plist */,
 				D0A943D224283EC500C3B4C4 /* SCMPAPI.swift */,
 				D08E85572428648A00871F2E /* SCMPVirusCases.swift */,
-				D0A943D424283F1200C3B4C4 /* SCMPCountries.swift */,
+				D0A943D424283F1200C3B4C4 /* SCMPCountry.swift */,
 				D0A943DB24285A6E00C3B4C4 /* COVID19Errors.swift */,
 				D0A943DA2428592900C3B4C4 /* Extensions */,
 			);
@@ -355,6 +420,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D08E859224288D7D00871F2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08E859B24288D7D00871F2E /* COVID_19_API_watchOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A943AF24283EB100C3B4C4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +439,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D08E859624288D7D00871F2E /* COVID-19-API watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D08E85A024288D7D00871F2E /* Build configuration list for PBXNativeTarget "COVID-19-API watchOS" */;
+			buildPhases = (
+				D08E859224288D7D00871F2E /* Headers */,
+				D08E859324288D7D00871F2E /* Sources */,
+				D08E859424288D7D00871F2E /* Frameworks */,
+				D08E859524288D7D00871F2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "COVID-19-API watchOS";
+			productName = "COVID-19-API watchOS";
+			productReference = D08E859724288D7D00871F2E /* COVID_19_API_watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D0A9434C24283DA500C3B4C4 /* COVID-19 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A943A624283DAA00C3B4C4 /* Build configuration list for PBXNativeTarget "COVID-19" */;
@@ -447,10 +538,12 @@
 				D0A9438224283DA900C3B4C4 /* Sources */,
 				D0A9438324283DA900C3B4C4 /* Frameworks */,
 				D0A9438424283DA900C3B4C4 /* Resources */,
+				D08E857A2428877900871F2E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D08E859D24288D7D00871F2E /* PBXTargetDependency */,
 			);
 			name = "COVID-19 WatchKit Extension";
 			productName = "COVID-19 WatchKit Extension";
@@ -504,6 +597,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = michael.chan;
 				TargetAttributes = {
+					D08E859624288D7D00871F2E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					D0A9434C24283DA500C3B4C4 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -551,11 +647,19 @@
 				D0A9438524283DA900C3B4C4 /* COVID-19 WatchKit Extension */,
 				D0A943B324283EB100C3B4C4 /* COVID-19-API */,
 				D0A943BB24283EB100C3B4C4 /* COVID-19-APITests */,
+				D08E859624288D7D00871F2E /* COVID-19-API watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D08E859524288D7D00871F2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A9434B24283DA500C3B4C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -615,6 +719,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D08E859324288D7D00871F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08E85A724288D8A00871F2E /* Foundation+Extension.swift in Sources */,
+				D08E85A424288D8700871F2E /* SCMPVirusCases.swift in Sources */,
+				D08E85A524288D8700871F2E /* SCMPCountry.swift in Sources */,
+				D08E85A624288D8700871F2E /* COVID19Errors.swift in Sources */,
+				D08E85A324288D8700871F2E /* SCMPAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0A9434924283DA500C3B4C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -645,10 +761,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08E85B02429927900871F2E /* WatchCOVID19ListViewModel.swift in Sources */,
 				D0A9438E24283DA900C3B4C4 /* HostingController.swift in Sources */,
-				D0A9438C24283DA900C3B4C4 /* ContentView.swift in Sources */,
 				D0A9439224283DA900C3B4C4 /* NotificationController.swift in Sources */,
 				D0A9439024283DA900C3B4C4 /* ExtensionDelegate.swift in Sources */,
+				D08E85AB2428957400871F2E /* COVID19SummaryCountView.swift in Sources */,
+				D08E85AD2428990500871F2E /* COVID19SummaryCountViewType.swift in Sources */,
+				D08E85A9242894F600871F2E /* WatchCOVID19ListView.swift in Sources */,
 				D0A9439424283DA900C3B4C4 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,7 +776,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A943D524283F1200C3B4C4 /* SCMPCountries.swift in Sources */,
+				D0A943D524283F1200C3B4C4 /* SCMPCountry.swift in Sources */,
 				D08E85582428648A00871F2E /* SCMPVirusCases.swift in Sources */,
 				D0A943D9242858F400C3B4C4 /* Foundation+Extension.swift in Sources */,
 				D0A943DC24285A6E00C3B4C4 /* COVID19Errors.swift in Sources */,
@@ -677,6 +796,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D08E859D24288D7D00871F2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D08E859624288D7D00871F2E /* COVID-19-API watchOS */;
+			targetProxy = D08E859C24288D7D00871F2E /* PBXContainerItemProxy */;
+		};
 		D0A9436524283DA800C3B4C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0A9434C24283DA500C3B4C4 /* COVID-19 */;
@@ -734,6 +858,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D08E85A124288D7D00871F2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "COVID-19-API watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.COVID-19-API-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		D08E85A224288D7D00871F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "COVID-19-API watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.COVID-19-API-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
 		D0A9439C24283DA900C3B4C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1053,6 +1235,7 @@
 		D0A943CC24283EB100C3B4C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1081,6 +1264,7 @@
 		D0A943CD24283EB100C3B4C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1146,6 +1330,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D08E85A024288D7D00871F2E /* Build configuration list for PBXNativeTarget "COVID-19-API watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D08E85A124288D7D00871F2E /* Debug */,
+				D08E85A224288D7D00871F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D0A9434824283DA500C3B4C4 /* Build configuration list for PBXProject "COVID-19" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

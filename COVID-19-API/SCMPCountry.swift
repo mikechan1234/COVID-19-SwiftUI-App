@@ -1,5 +1,5 @@
 //
-//  Countries.swift
+//  SCMPCountry.swift
 //  COVID-19-API
 //
 //  Created by michael.chan on 23/03/2020.
@@ -25,19 +25,19 @@ protocol SCMPCOVID19Entry {
     
 }
 
-struct SCMPCountries: SCMPCOVID19Entry {
+public struct SCMPCountry: SCMPCOVID19Entry {
     
-    var name: String
-    var cases: Int
-    var deaths: Int
-    var recovered: Int
-    var lastUpdated: Date?
-    var comments: String?
+    public var name: String
+    public var cases: Int
+    public var deaths: Int
+    public var recovered: Int
+    public var lastUpdated: Date?
+    public var comments: String?
     
 }
 
 //Codable Extension
-extension SCMPCountries: Codable {
+extension SCMPCountry: Codable {
     
     enum CodingKeys: String, CodingKey {
      
@@ -50,7 +50,7 @@ extension SCMPCountries: Codable {
         
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let casesString = try container.decode(String.self, forKey: .cases)

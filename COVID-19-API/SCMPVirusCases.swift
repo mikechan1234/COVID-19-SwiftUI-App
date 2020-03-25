@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct SCMPVirusCases {
+public struct SCMPVirusCases {
     
-    var title: String
-    var lastUpdated: Date
-    var entries: [SCMPCountries]
+    public var title: String
+    public var lastUpdated: Date
+    public var entries: [SCMPCountry]
     
 }
 
@@ -20,20 +20,21 @@ struct SCMPVirusCases {
 extension SCMPVirusCases: Codable {
     
     enum CodingKeys: String, CodingKey {
-        case title, entries
+        case title
+        case entries
         case lastUpdated = "last_updated"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         title = try container.decode(String.self, forKey: .title)
-        entries = try container.decode([SCMPCountries].self, forKey: .entries)
+        entries = try container.decode([SCMPCountry].self, forKey: .entries)
         
         let dateString = try container.decode(String.self, forKey: .lastUpdated)
         
-        guard let date = DateFormatter.MMMdhmma.date(from: dateString) else {
+        guard let date = DateFormatter.longDateTime.date(from: dateString) else {
             
             throw COVID19Error.formatting
             
