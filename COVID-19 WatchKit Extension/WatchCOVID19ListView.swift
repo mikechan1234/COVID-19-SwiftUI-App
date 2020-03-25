@@ -20,17 +20,15 @@ struct WatchCOVID19ListView: View {
             
             VStack {
                 
-//                COVID19SummaryCountView(type: .total, count: .constant("1000"))
                 COVID19SummaryCountView(type: .total, count: $model.totalCount.value)
-
 
                 if fullPreview {
                 
                     HStack(alignment: .center) {
                         
-                        COVID19SummaryCountView(type: .deaths, count: .constant("1000"))
+                        COVID19SummaryCountView(type: .deaths, count: $model.deathCount.value)
 
-                        COVID19SummaryCountView(type: .recovered, count: .constant("1000"))
+                        COVID19SummaryCountView(type: .recovered, count: $model.recoveredCount.value)
                         
                     }
                     
