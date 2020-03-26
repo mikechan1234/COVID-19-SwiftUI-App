@@ -10,8 +10,8 @@ import SwiftUI
 
 struct COVID19SummaryCountView: View {
     
-    @State var type: COVID19SummaryCountViewType = .total
-    @Binding var count: String
+    var type: COVID19SummaryCountViewType = .total
+    var count: String
     
     var body: some View {
 
@@ -33,8 +33,9 @@ struct COVID19SummaryCountView: View {
 }
 
 struct COVID19SummaryCountView_Previews: PreviewProvider {
+    
     static var previews: some View {
-//        COVID19SummaryCountView(type: .recovered, count: "10000")
-        COVID19SummaryCountView(type: .recovered, count: .constant("10000"))
+        COVID19SummaryCountView(type: .recovered, count: "10000")
     }
+    
 }

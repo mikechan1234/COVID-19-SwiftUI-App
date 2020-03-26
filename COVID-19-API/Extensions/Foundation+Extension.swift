@@ -10,7 +10,7 @@ import Foundation
 
 extension NumberFormatter {
     
-    static var decimal: NumberFormatter {
+    public static var decimal: NumberFormatter {
             
         let formatter = NumberFormatter()
         
@@ -24,7 +24,7 @@ extension NumberFormatter {
 
 extension DateFormatter {
     
-    static var MMMdhmma: DateFormatter {
+    public static var MMMdhmma: DateFormatter {
         
         let formatter = DateFormatter()
         

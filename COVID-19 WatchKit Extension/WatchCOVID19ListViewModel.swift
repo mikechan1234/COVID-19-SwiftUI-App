@@ -8,11 +8,15 @@
 
 import Combine
 import COVID_19_API_watchOS
+import SwiftUI
+
+//Biggest downside in using @Published is that cannot be an subscriber
 
 class WatchCOVID19ListViewModel: ObservableObject {
     
     var cancellables: Set<AnyCancellable> = []
     
+    var lastUpdated = CurrentValueSubject<String, Never>("")
     var totalCount = CurrentValueSubject<String, Never>("0")
     var deathCount = CurrentValueSubject<String, Never>("0")
     var recoveredCount = CurrentValueSubject<String, Never>("0")
@@ -28,11 +32,11 @@ class WatchCOVID19ListViewModel: ObservableObject {
                 
             }
             
-        }.map { (value) in
+        }.compactMap({ (value) -> String? in
             
-            String(value)
+            NumberFormatter.decimal.string(from: NSNumber(value: value))
             
-        }.subscribe(totalCount))
+        }).replaceNil(with: "").subscribe(totalCount))
         
         cancellables.insert(totalCount.sink { (count) in
             
@@ -48,11 +52,11 @@ class WatchCOVID19ListViewModel: ObservableObject {
                 
             }
             
-        }.map { (value) in
+        }.compactMap({ (value) -> String? in
             
-            String(value)
+            NumberFormatter.decimal.string(from: NSNumber(value: value))
             
-        }.subscribe(deathCount))
+        }).replaceNil(with: "").subscribe(deathCount))
         
         cancellables.insert(countries.map { (countries) -> Int in
             
@@ -62,11 +66,11 @@ class WatchCOVID19ListViewModel: ObservableObject {
                 
             }
             
-        }.map { (value) in
+        }.compactMap({ (value) -> String? in
             
-            String(value)
+            NumberFormatter.decimal.string(from: NSNumber(value: value))
             
-        }.subscribe(recoveredCount))
+        }).replaceNil(with: "").subscribe(recoveredCount))
         
     }
     
@@ -96,6 +100,7 @@ class WatchCOVID19ListViewModel: ObservableObject {
                 
             }
             
+            self.lastUpdated.send("Last Updated: \(DateFormatter.MMMdhmma.string(from: virusCases.lastUpdated))")
             self.countries.send(virusCases.entries)
             
             DispatchQueue.main.async {

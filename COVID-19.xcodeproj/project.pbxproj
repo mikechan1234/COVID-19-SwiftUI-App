@@ -279,6 +279,13 @@
 			path = COVID19SummaryCountView;
 			sourceTree = "<group>";
 		};
+		D09787C2242C796F00ED03BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D0A9434424283DA500C3B4C4 = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +376,7 @@
 				D0A9438F24283DA900C3B4C4 /* ExtensionDelegate.swift */,
 				D0A9439124283DA900C3B4C4 /* NotificationController.swift */,
 				D0A9439324283DA900C3B4C4 /* NotificationView.swift */,
+				D09787C2242C796F00ED03BC /* Extensions */,
 				D0A9439524283DA900C3B4C4 /* Assets.xcassets */,
 				D0A9439A24283DA900C3B4C4 /* Info.plist */,
 				D0A9439B24283DA900C3B4C4 /* PushNotificationPayload.apns */,

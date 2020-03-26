@@ -10,7 +10,7 @@ import SwiftUI
 
 struct WatchCOVID19ListView: View {
     
-    @State var fullPreview: Bool = false
+    @State private var fullPreview: Bool = false
     
     @ObservedObject var model = WatchCOVID19ListViewModel()
     
@@ -20,23 +20,31 @@ struct WatchCOVID19ListView: View {
             
             VStack {
                 
-                COVID19SummaryCountView(type: .total, count: $model.totalCount.value)
+                HStack {
+                    
+                    Spacer()
+                    
+                    Text("\(model.lastUpdated.value)").multilineTextAlignment(.trailing)
+
+                }.padding(.horizontal, 10)
+                
+                COVID19SummaryCountView(type: .total, count: model.totalCount.value)
 
                 if fullPreview {
                 
                     HStack(alignment: .center) {
                         
-                        COVID19SummaryCountView(type: .deaths, count: $model.deathCount.value)
+                        COVID19SummaryCountView(type: .deaths, count: model.deathCount.value)
 
-                        COVID19SummaryCountView(type: .recovered, count: $model.recoveredCount.value)
+                        COVID19SummaryCountView(type: .recovered, count: model.recoveredCount.value)
                         
                     }
                     
                 } else {
                     
-                    COVID19SummaryCountView(type: .deaths, count: $model.deathCount.value)
+                    COVID19SummaryCountView(type: .deaths, count: model.deathCount.value)
 
-                    COVID19SummaryCountView(type: .recovered, count: $model.recoveredCount.value)
+                    COVID19SummaryCountView(type: .recovered, count: model.recoveredCount.value)
                     
                 }
                 
@@ -44,7 +52,9 @@ struct WatchCOVID19ListView: View {
             
         }.onAppear {
             
-            self.model.getData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.model.getData()
+            }
             
         }
         
