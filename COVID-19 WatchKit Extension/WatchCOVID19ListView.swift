@@ -11,7 +11,6 @@ import SwiftUI
 struct WatchCOVID19ListView: View {
     
     @State private var fullPreview: Bool = false
-    
     @ObservedObject var model = WatchCOVID19ListViewModel()
     
     var body: some View {
@@ -35,7 +34,6 @@ struct WatchCOVID19ListView: View {
                     HStack(alignment: .center) {
                         
                         COVID19SummaryCountView(type: .deaths, count: model.deathCount.value)
-
                         COVID19SummaryCountView(type: .recovered, count: model.recoveredCount.value)
                         
                     }
@@ -43,7 +41,6 @@ struct WatchCOVID19ListView: View {
                 } else {
                     
                     COVID19SummaryCountView(type: .deaths, count: model.deathCount.value)
-
                     COVID19SummaryCountView(type: .recovered, count: model.recoveredCount.value)
                     
                 }
@@ -56,12 +53,34 @@ struct WatchCOVID19ListView: View {
                 
             }
             
+        }.contextMenu {
+            
+            Button(action: {
+                self.model.changeSorting(to: .alphabetical)
+            }, label: {
+                Text("Alphabetical")
+            })
+            Button(action: {
+                self.model.changeSorting(to: .deaths)
+            }, label: {
+                VStack {
+                    Image("Healthcare-Skull-icon").resizable().aspectRatio(contentMode: .fit).frame(height: 30, alignment: .center)
+                    Text("Deaths")
+                }
+            })
+            Button(action: {
+                self.model.changeSorting(to: .recovered)
+            }, label: {
+                VStack {
+                    Image("cross-green").resizable().aspectRatio(contentMode: .fit).frame(height: 30, alignment: .center)
+                    Text("Recovered")
+                }
+            })
+            
         }.onAppear {
-            
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.model.getData()
-//            }
-            
+
+            self.model.getData()
+
         }
         
     }

@@ -44,7 +44,7 @@ enum WatchCOVID19ListViewModelSortingTypes {
 class WatchCOVID19ListViewModel: ObservableObject {
     
     private var cancellables: Set<AnyCancellable> = []
-    private var sortingType = WatchCOVID19ListViewModelSortingTypes.deaths
+    private var sortingType = CurrentValueSubject<WatchCOVID19ListViewModelSortingTypes, Never>(.deaths)
     
     var lastUpdated = CurrentValueSubject<String, Never>("")
     var totalCount = CurrentValueSubject<String, Never>("0")
@@ -102,14 +102,30 @@ class WatchCOVID19ListViewModel: ObservableObject {
             
         }).replaceNil(with: "").subscribe(recoveredCount))
         
+        cancellables.insert(sortingType.sink {[unowned self] (type) in
+            
+            self.countries.value.sort(by: self.sortingType.value.sort)
+            
+        })
+        
     }
     
 //    @discardableResult
 //    func getData() -> AnyCancellable {
 //
-//        return SCMPAPI.getCases().map { (value) -> [SCMPCountry] in
+//        return SCMPAPI.getCases().map {[weak self] (value) -> [SCMPCountry] in
 //
-//            value.entries
+//            guard let self = self else {
+//                
+//                return []
+//                
+//            }
+//                  
+//            return value.entries.filter { (country) -> Bool in
+//                
+//                country.cases > 0
+//                
+//            }.sorted(by: self.sortingType.value.sort)
 //
 //        }.catch { (error) -> Empty<[SCMPCountry], Never> in
 //
@@ -132,17 +148,30 @@ class WatchCOVID19ListViewModel: ObservableObject {
             
             self.lastUpdated.send("Last Updated: \(DateFormatter.MMMdhmma.string(from: virusCases.lastUpdated))")
             
-            self.countries.send(virusCases.entries.filter({ (country) -> Bool in
+            let cases = virusCases.entries.filter({ (country) -> Bool in
                 
                 country.cases > 0
                 
-            }).sorted(by: self.sortingType.sort))
+            }).sorted(by: self.sortingType.value.sort)
+            
+            self.countries.send(cases)
             
             DispatchQueue.main.async {
                 self.objectWillChange.send()
             }
             
         }
+        
+    }
+    
+}
+
+extension WatchCOVID19ListViewModel {
+    
+    func changeSorting(to type: WatchCOVID19ListViewModelSortingTypes) {
+        
+        sortingType.value = type
+        objectWillChange.send()
         
     }
     
