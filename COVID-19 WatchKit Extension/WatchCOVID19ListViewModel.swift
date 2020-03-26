@@ -12,9 +12,39 @@ import SwiftUI
 
 //Biggest downside in using @Published is that cannot be an subscriber
 
+enum WatchCOVID19ListViewModelSortingTypes {
+    
+    case alphabetical
+    case deaths
+    case recovered
+    
+    var sort: ((SCMPCountry, SCMPCountry) -> Bool) {
+        
+        switch self {
+            
+        case .alphabetical:
+            return {
+                $0.name < $1.name
+            }
+        case .deaths:
+            return {
+                $0.deaths > $1.deaths
+            }
+        case .recovered:
+            return {
+                $0.recovered > $1.recovered
+            }
+
+        }
+        
+    }
+    
+}
+
 class WatchCOVID19ListViewModel: ObservableObject {
     
-    var cancellables: Set<AnyCancellable> = []
+    private var cancellables: Set<AnyCancellable> = []
+    private var sortingType = WatchCOVID19ListViewModelSortingTypes.deaths
     
     var lastUpdated = CurrentValueSubject<String, Never>("")
     var totalCount = CurrentValueSubject<String, Never>("0")
@@ -101,7 +131,12 @@ class WatchCOVID19ListViewModel: ObservableObject {
             }
             
             self.lastUpdated.send("Last Updated: \(DateFormatter.MMMdhmma.string(from: virusCases.lastUpdated))")
-            self.countries.send(virusCases.entries)
+            
+            self.countries.send(virusCases.entries.filter({ (country) -> Bool in
+                
+                country.cases > 0
+                
+            }).sorted(by: self.sortingType.sort))
             
             DispatchQueue.main.async {
                 self.objectWillChange.send()

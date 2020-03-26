@@ -18,7 +18,7 @@ struct WatchCOVID19ListView: View {
             
         ScrollView {
             
-            VStack {
+            VStack(alignment: .leading) {
                 
                 HStack {
                     
@@ -48,13 +48,19 @@ struct WatchCOVID19ListView: View {
                     
                 }
                 
+                ForEach(model.countries.value) { country in
+                    
+                    COVID19CountryInformationRow(country: country)
+                    
+                }
+                
             }
             
         }.onAppear {
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.model.getData()
-            }
+//            }
             
         }
         

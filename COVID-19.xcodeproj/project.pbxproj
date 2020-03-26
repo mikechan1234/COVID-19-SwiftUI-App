@@ -20,6 +20,8 @@
 		D08E85AB2428957400871F2E /* COVID19SummaryCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E85AA2428957400871F2E /* COVID19SummaryCountView.swift */; };
 		D08E85AD2428990500871F2E /* COVID19SummaryCountViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E85AC2428990500871F2E /* COVID19SummaryCountViewType.swift */; };
 		D08E85B02429927900871F2E /* WatchCOVID19ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08E85AF2429927900871F2E /* WatchCOVID19ListViewModel.swift */; };
+		D09787C4242C807A00ED03BC /* COVID19CountryInformationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09787C3242C807A00ED03BC /* COVID19CountryInformationRow.swift */; };
+		D09787C6242C8B6500ED03BC /* COVID19CountryStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09787C5242C8B6500ED03BC /* COVID19CountryStatisticView.swift */; };
 		D0A9435124283DA500C3B4C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9435024283DA500C3B4C4 /* AppDelegate.swift */; };
 		D0A9435324283DA500C3B4C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9435224283DA500C3B4C4 /* SceneDelegate.swift */; };
 		D0A9435524283DA500C3B4C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9435424283DA500C3B4C4 /* ContentView.swift */; };
@@ -165,6 +167,8 @@
 		D08E85AA2428957400871F2E /* COVID19SummaryCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19SummaryCountView.swift; sourceTree = "<group>"; };
 		D08E85AC2428990500871F2E /* COVID19SummaryCountViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19SummaryCountViewType.swift; sourceTree = "<group>"; };
 		D08E85AF2429927900871F2E /* WatchCOVID19ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCOVID19ListViewModel.swift; sourceTree = "<group>"; };
+		D09787C3242C807A00ED03BC /* COVID19CountryInformationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19CountryInformationRow.swift; sourceTree = "<group>"; };
+		D09787C5242C8B6500ED03BC /* COVID19CountryStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19CountryStatisticView.swift; sourceTree = "<group>"; };
 		D0A9434D24283DA500C3B4C4 /* COVID-19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A9435024283DA500C3B4C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A9435224283DA500C3B4C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -286,6 +290,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D09787C7242C8BD900ED03BC /* COVID19CountryInformationRow */ = {
+			isa = PBXGroup;
+			children = (
+				D09787C3242C807A00ED03BC /* COVID19CountryInformationRow.swift */,
+				D09787C5242C8B6500ED03BC /* COVID19CountryStatisticView.swift */,
+			);
+			path = COVID19CountryInformationRow;
+			sourceTree = "<group>";
+		};
 		D0A9434424283DA500C3B4C4 = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +385,7 @@
 				D08E85A8242894F600871F2E /* WatchCOVID19ListView.swift */,
 				D08E85AF2429927900871F2E /* WatchCOVID19ListViewModel.swift */,
 				D08E85AE24289A6800871F2E /* COVID19SummaryCountView */,
+				D09787C7242C8BD900ED03BC /* COVID19CountryInformationRow */,
 				D0A9438D24283DA900C3B4C4 /* HostingController.swift */,
 				D0A9438F24283DA900C3B4C4 /* ExtensionDelegate.swift */,
 				D0A9439124283DA900C3B4C4 /* NotificationController.swift */,
@@ -776,6 +790,8 @@
 				D08E85AB2428957400871F2E /* COVID19SummaryCountView.swift in Sources */,
 				D08E85AD2428990500871F2E /* COVID19SummaryCountViewType.swift in Sources */,
 				D08E85A9242894F600871F2E /* WatchCOVID19ListView.swift in Sources */,
+				D09787C6242C8B6500ED03BC /* COVID19CountryStatisticView.swift in Sources */,
+				D09787C4242C807A00ED03BC /* COVID19CountryInformationRow.swift in Sources */,
 				D0A9439424283DA900C3B4C4 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,7 @@ import Foundation
 //    "recovered": "71,740",
 //    "lastupdated": "Mar 23, 04.00am"
 
-protocol SCMPCOVID19Entry {
+public protocol SCMPCOVID19Entry {
         
     var name: String {get set}
     var cases: Int {get set}
@@ -25,14 +25,21 @@ protocol SCMPCOVID19Entry {
     
 }
 
-public struct SCMPCountry: SCMPCOVID19Entry {
+public struct SCMPCountry: SCMPCOVID19Entry, Identifiable {
     
+    public var id: String
     public var name: String
     public var cases: Int
     public var deaths: Int
     public var recovered: Int
     public var lastUpdated: Date?
     public var comments: String?
+    
+    static public func random() -> SCMPCountry {
+        
+        SCMPCountry(id: "", name: String.randomString(length: 8), cases: .random(in: 0...10000), deaths: .random(in: 0...10000), recovered: .random(in: 0...100000), lastUpdated: nil, comments: nil)
+        
+    }
     
 }
 
@@ -58,6 +65,7 @@ extension SCMPCountry: Codable {
         let recoveredString = try container.decode(String.self, forKey: .recovered)
         
         name = try container.decode(String.self, forKey: .name)
+        id = name
         
         let decimalFormatter = NumberFormatter.decimal
         
@@ -79,6 +87,16 @@ extension SCMPCountry: Codable {
             
         comments = try? container.decode(String.self, forKey: .comments)
         
+    }
+    
+}
+
+
+extension String {
+    
+    static func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
     }
     
 }
