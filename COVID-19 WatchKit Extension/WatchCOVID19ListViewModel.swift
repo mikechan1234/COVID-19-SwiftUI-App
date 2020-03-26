@@ -7,7 +7,7 @@
 //
 
 import Combine
-import COVID_19_API_watchOS
+import COVID_19_API
 import SwiftUI
 
 //Biggest downside in using @Published is that cannot be an subscriber
@@ -116,15 +116,15 @@ class WatchCOVID19ListViewModel: ObservableObject {
 //        return SCMPAPI.getCases().map {[weak self] (value) -> [SCMPCountry] in
 //
 //            guard let self = self else {
-//                
+//
 //                return []
-//                
+//
 //            }
-//                  
+//
 //            return value.entries.filter { (country) -> Bool in
-//                
+//
 //                country.cases > 0
-//                
+//
 //            }.sorted(by: self.sortingType.value.sort)
 //
 //        }.catch { (error) -> Empty<[SCMPCountry], Never> in

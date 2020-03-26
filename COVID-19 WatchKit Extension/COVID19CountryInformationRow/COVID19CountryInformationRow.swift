@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import COVID_19_API_watchOS
+import COVID_19_API
 
 struct COVID19CountryInformationRow: View {
     

@@ -81,7 +81,7 @@ struct WatchCOVID19ListView: View {
 
             self.model.getData()
 
-        }
+        }.padding(.horizontal, 10)
         
     }
     
