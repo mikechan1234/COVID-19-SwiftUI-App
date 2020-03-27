@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import COVID_19_UI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

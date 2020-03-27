@@ -9,6 +9,7 @@
 import WatchKit
 import Foundation
 import SwiftUI
+import COVID_19_UI
 
 class HostingController: WKHostingController<WatchCOVID19ListView> {
 

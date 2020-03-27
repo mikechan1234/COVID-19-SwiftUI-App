@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-struct WatchCOVID19ListView: View {
+public struct WatchCOVID19ListView: View {
     
     @State private var fullPreview: Bool = false
-    @ObservedObject var model = WatchCOVID19ListViewModel()
+    @ObservedObject public var model = WatchCOVID19ListViewModel()
     
-    var body: some View {
+    public var body: some View {
             
         ScrollView {
             
@@ -82,6 +82,10 @@ struct WatchCOVID19ListView: View {
             self.model.getData()
 
         }.padding(.horizontal, 10)
+        
+    }
+    
+    public init() {
         
     }
     

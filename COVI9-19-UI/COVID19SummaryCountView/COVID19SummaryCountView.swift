@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-struct COVID19SummaryCountView: View {
+public struct COVID19SummaryCountView: View {
     
     var type: COVID19SummaryCountViewType = .total
     var count: String
     
-    var body: some View {
+    public var body: some View {
 
         GeometryReader { proxy in
             
