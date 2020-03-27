@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 import COVID_19_UI
+import COVID_19_API
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -31,6 +32,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        
+        SCMPAPI.getCases { (case, error) in
+            
+            print(`case`)
+            print(error)
+            
+        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

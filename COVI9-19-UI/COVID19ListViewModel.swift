@@ -7,8 +7,8 @@
 //
 
 import Combine
-import COVID_19_API
 import SwiftUI
+import COVID_19_API
 
 //Biggest downside in using @Published is that cannot be an subscriber
 

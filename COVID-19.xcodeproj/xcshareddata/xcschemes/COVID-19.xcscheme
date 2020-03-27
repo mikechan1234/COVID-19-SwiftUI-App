@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1130"
+   LastUpgradeVersion = "1140"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0A943B324283EB100C3B4C4"
-               BuildableName = "COVID_19_API.framework"
-               BlueprintName = "COVID-19-API"
+               BlueprintIdentifier = "D0A9434C24283DA500C3B4C4"
+               BuildableName = "COVID-19.app"
+               BlueprintName = "COVID-19"
+               ReferencedContainer = "container:COVID-19.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D09787DB242D919B00ED03BC"
+               BuildableName = "COVID_19_UI.framework"
+               BlueprintName = "COVID-19-UI"
                ReferencedContainer = "container:COVID-19.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,6 +42,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D0A9436224283DA800C3B4C4"
+               BuildableName = "COVID-19Tests.xctest"
+               BlueprintName = "COVID-19Tests"
+               ReferencedContainer = "container:COVID-19.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -40,6 +64,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D0A9434C24283DA500C3B4C4"
+            BuildableName = "COVID-19.app"
+            BlueprintName = "COVID-19"
+            ReferencedContainer = "container:COVID-19.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -47,15 +81,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D0A943B324283EB100C3B4C4"
-            BuildableName = "COVID_19_API.framework"
-            BlueprintName = "COVID-19-API"
+            BlueprintIdentifier = "D0A9434C24283DA500C3B4C4"
+            BuildableName = "COVID-19.app"
+            BlueprintName = "COVID-19"
             ReferencedContainer = "container:COVID-19.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

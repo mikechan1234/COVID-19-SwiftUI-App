@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "COVID-19-API",
+        "repositoryURL": "https://github.com/mikechan1234/COVID-19-API",
+        "state": {
+          "branch": "master",
+          "revision": "04917f359047259cb966c5b8b85dfa751066b169",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
