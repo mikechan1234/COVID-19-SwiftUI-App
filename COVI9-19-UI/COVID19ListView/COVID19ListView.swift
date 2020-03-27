@@ -50,7 +50,7 @@ public struct COVID19ListView: View {
                     
                 }
                 
-            }
+            }.padding(.horizontal, 10)
             
         }.contextMenu {
             
@@ -80,7 +80,7 @@ public struct COVID19ListView: View {
 
             self.model.getData()
 
-        }.padding(.horizontal, 10)
+        }
         
     }
     
