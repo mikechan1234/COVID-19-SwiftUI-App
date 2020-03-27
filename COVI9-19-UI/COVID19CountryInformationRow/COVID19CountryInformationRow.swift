@@ -12,17 +12,28 @@ import COVID_19_API
 struct COVID19CountryInformationRow: View {
     
     let country: SCMPCountry
+    #if os(watchOS)
+    let backgroundColor = Color(red: 51/255, green: 51/255, blue: 51/255)
+    #else
+    let backgroundColor = Color("Total Background")
+    #endif
     
     var body: some View {
         
         VStack(alignment: .leading) {
             
             Text(country.name).fontWeight(.heavy)
+            #if os(watchOS)
+                COVID19CountryStatisticView(imageName: "Healthcare-Skull-icon", statValue: country.deaths)
+                COVID19CountryStatisticView(imageName: "cross-green", statValue: country.recovered)
+            #else
+                HStack {
+                    COVID19CountryStatisticView(imageName: "Healthcare-Skull-icon", statValue: country.deaths)
+                    COVID19CountryStatisticView(imageName: "cross-green", statValue: country.recovered)
+                }
+            #endif
             
-            COVID19CountryStatisticView(imageName: "Healthcare-Skull-icon", statValue: country.deaths)
-            COVID19CountryStatisticView(imageName: "cross-green", statValue: country.recovered)
-            
-        }.padding(.all, 10).background(Color(red: 51/255, green: 51/255, blue: 51/255)).cornerRadius(10)
+        }.padding(.all, 10).background(backgroundColor).cornerRadius(10)
         
     }
     
