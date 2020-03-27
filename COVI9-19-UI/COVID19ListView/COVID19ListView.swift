@@ -10,7 +10,6 @@ import SwiftUI
 
 public struct COVID19ListView: View {
     
-    @State private var fullPreview: Bool = false
     @ObservedObject public var model = COVID19ListViewModel()
     
     public var body: some View {
@@ -28,8 +27,13 @@ public struct COVID19ListView: View {
                 }.padding(.horizontal, 10)
                 
                 COVID19SummaryCountView(type: .total, count: model.totalCount.value)
+                
+                #if os(watchOS)
+                
+                    COVID19SummaryCountView(type: .deaths, count: model.deathCount.value)
+                    COVID19SummaryCountView(type: .recovered, count: model.recoveredCount.value)
 
-                if fullPreview {
+                #else
                 
                     HStack(alignment: .center) {
                         
@@ -38,12 +42,7 @@ public struct COVID19ListView: View {
                         
                     }
                     
-                } else {
-                    
-                    COVID19SummaryCountView(type: .deaths, count: model.deathCount.value)
-                    COVID19SummaryCountView(type: .recovered, count: model.recoveredCount.value)
-                    
-                }
+                #endif
                 
                 ForEach(model.countries.value) { country in
                     

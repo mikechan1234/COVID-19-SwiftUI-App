@@ -13,7 +13,6 @@
 		D076A3FF242DABCC00952CB6 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076A3FC242DABC200952CB6 /* Foundation+Extensions.swift */; };
 		D076A402242DABEB00952CB6 /* COVID-19-API+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076A400242DABE800952CB6 /* COVID-19-API+Extensions.swift */; };
 		D076A403242DABEC00952CB6 /* COVID-19-API+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076A400242DABE800952CB6 /* COVID-19-API+Extensions.swift */; };
-		D09787D6242C9CEA00ED03BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A9439524283DA900C3B4C4 /* Assets.xcassets */; };
 		D09787E5242D919B00ED03BC /* COVID_19_UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09787DC242D919B00ED03BC /* COVID_19_UI.framework */; };
 		D09787EC242D919B00ED03BC /* COVI9_19_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09787EB242D919B00ED03BC /* COVI9_19_UITests.swift */; };
 		D09787EE242D919B00ED03BC /* COVI9_19_UI.h in Headers */ = {isa = PBXBuildFile; fileRef = D09787DE242D919B00ED03BC /* COVI9_19_UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,8 +51,10 @@
 		D0A9439024283DA900C3B4C4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9438F24283DA900C3B4C4 /* ExtensionDelegate.swift */; };
 		D0A9439224283DA900C3B4C4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9439124283DA900C3B4C4 /* NotificationController.swift */; };
 		D0A9439424283DA900C3B4C4 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9439324283DA900C3B4C4 /* NotificationView.swift */; };
-		D0A9439624283DA900C3B4C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A9439524283DA900C3B4C4 /* Assets.xcassets */; };
 		D0A9439924283DA900C3B4C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A9439824283DA900C3B4C4 /* Preview Assets.xcassets */; };
+		D0C5B309242DD7D200EB122E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A9439524283DA900C3B4C4 /* Assets.xcassets */; };
+		D0C5B30A242DD7F200EB122E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A9439524283DA900C3B4C4 /* Assets.xcassets */; };
+		D0C5B30C242DD80A00EB122E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C5B30B242DD80A00EB122E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +230,7 @@
 		D0A9439824283DA900C3B4C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0A9439A24283DA900C3B4C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A9439B24283DA900C3B4C4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D0C5B30B242DD80A00EB122E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,11 +332,11 @@
 			children = (
 				D09787DE242D919B00ED03BC /* COVI9_19_UI.h */,
 				D09787C7242C8BD900ED03BC /* COVID19CountryInformationRow */,
-				D08E85A8242894F600871F2E /* COVID19ListView.swift */,
-				D08E85AF2429927900871F2E /* COVID19ListViewModel.swift */,
+				D0C5B308242DD5A700EB122E /* COVID19ListView */,
 				D08E85AE24289A6800871F2E /* COVID19SummaryCountView */,
 				D076A404242DAC0300952CB6 /* Extensions */,
 				D09787DF242D919B00ED03BC /* Info.plist */,
+				D0A9439524283DA900C3B4C4 /* Assets.xcassets */,
 			);
 			path = "COVI9-19-UI";
 			sourceTree = "<group>";
@@ -455,10 +457,10 @@
 				D0A9439124283DA900C3B4C4 /* NotificationController.swift */,
 				D0A9439324283DA900C3B4C4 /* NotificationView.swift */,
 				D09787C2242C796F00ED03BC /* Extensions */,
-				D0A9439524283DA900C3B4C4 /* Assets.xcassets */,
 				D0A9439A24283DA900C3B4C4 /* Info.plist */,
 				D0A9439B24283DA900C3B4C4 /* PushNotificationPayload.apns */,
 				D0A9439724283DA900C3B4C4 /* Preview Content */,
+				D0C5B30B242DD80A00EB122E /* Assets.xcassets */,
 			);
 			path = "COVID-19 WatchKit Extension";
 			sourceTree = "<group>";
@@ -469,6 +471,15 @@
 				D0A9439824283DA900C3B4C4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0C5B308242DD5A700EB122E /* COVID19ListView */ = {
+			isa = PBXGroup;
+			children = (
+				D08E85A8242894F600871F2E /* COVID19ListView.swift */,
+				D08E85AF2429927900871F2E /* COVID19ListViewModel.swift */,
+			);
+			path = COVID19ListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -725,6 +736,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C5B309242DD7D200EB122E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +751,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C5B30A242DD7F200EB122E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,7 +761,6 @@
 			files = (
 				D0A9435D24283DA800C3B4C4 /* LaunchScreen.storyboard in Resources */,
 				D0A9435A24283DA800C3B4C4 /* Preview Assets.xcassets in Resources */,
-				D09787D6242C9CEA00ED03BC /* Assets.xcassets in Resources */,
 				D0A9435724283DA800C3B4C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,8 +792,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C5B30C242DD80A00EB122E /* Assets.xcassets in Resources */,
 				D0A9439924283DA900C3B4C4 /* Preview Assets.xcassets in Resources */,
-				D0A9439624283DA900C3B4C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
