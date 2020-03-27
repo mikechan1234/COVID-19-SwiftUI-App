@@ -11,11 +11,11 @@ import Foundation
 import SwiftUI
 import COVID_19_UI
 
-class HostingController: WKHostingController<WatchCOVID19ListView> {
+class HostingController: WKHostingController<COVID19ListView> {
 
-    override var body: WatchCOVID19ListView {
+    override var body: COVID19ListView {
 
-        return WatchCOVID19ListView()
+        return COVID19ListView()
 
     }
 

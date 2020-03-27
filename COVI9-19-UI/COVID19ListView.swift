@@ -1,5 +1,5 @@
 //
-//  WatchCOVID19ListView.swift
+//  COVID19ListView.swift
 //  COVID-19 WatchKit Extension
 //
 //  Created by michael.chan on 23/03/2020.
@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-public struct WatchCOVID19ListView: View {
+public struct COVID19ListView: View {
     
     @State private var fullPreview: Bool = false
-    @ObservedObject public var model = WatchCOVID19ListViewModel()
+    @ObservedObject public var model = COVID19ListViewModel()
     
     public var body: some View {
             
@@ -93,6 +93,6 @@ public struct WatchCOVID19ListView: View {
 
 struct WatchCOVID19ListView_Previews: PreviewProvider {
     static var previews: some View {
-        WatchCOVID19ListView()
+        COVID19ListView()
     }
 }

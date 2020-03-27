@@ -12,7 +12,7 @@ import SwiftUI
 
 //Biggest downside in using @Published is that cannot be an subscriber
 
-public enum WatchCOVID19ListViewModelSortingTypes {
+public enum COVID19ListViewModelSortingTypes {
     
     case alphabetical
     case deaths
@@ -44,7 +44,7 @@ public enum WatchCOVID19ListViewModelSortingTypes {
 public class COVID19ListViewModel: ObservableObject {
     
     private var cancellables: Set<AnyCancellable> = []
-    private var sortingType = CurrentValueSubject<WatchCOVID19ListViewModelSortingTypes, Never>(.deaths)
+    private var sortingType = CurrentValueSubject<COVID19ListViewModelSortingTypes, Never>(.deaths)
     
     public var lastUpdated = CurrentValueSubject<String, Never>("")
     public var totalCount = CurrentValueSubject<String, Never>("0")
@@ -168,7 +168,7 @@ public class COVID19ListViewModel: ObservableObject {
 
 public extension COVID19ListViewModel {
     
-    func changeSorting(to type: WatchCOVID19ListViewModelSortingTypes) {
+    func changeSorting(to type: COVID19ListViewModelSortingTypes) {
         
         sortingType.value = type
         objectWillChange.send()
